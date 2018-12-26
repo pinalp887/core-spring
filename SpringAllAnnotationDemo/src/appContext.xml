@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+  		<!-- this is the simple dependancy injection demo using setter  -->
+  		<!-- <bean id="user" class="com.di.User">
+  			<property name="userId" value="1"></property>
+  			<property name="userName" value="PINAL"></property>
+  			<property name="pancard" ref="pancard"></property>
+  		</bean>
+  		<bean id="pancard" class="com.di.Pancard">
+  			<property name="name" value="PINAL"></property>
+  			<property name="panNo" value="JGVAJGVA545AASS"></property>
+  		</bean> -->
+  		
+  			<!-- this is the simple dependancy injection demo using @Autowired annotation and Qualifier  
+  				with init method and destroy method declare in xml file
+  			 -->
+  		<!-- <context:annotation-config></context:annotation-config>
+  		<bean id="user" class="com.di.User" init-method="init" destroy-method="destroy">
+  			<property name="userId" value="1"></property>
+  			<property name="userName" value="PINAL"></property>
+  		</bean>
+  		<bean id="pancard" class="com.di.Pancard">
+  			<property name="name" value="PINAL"></property>
+  			<property name="panNo" value="JGVAJGVA545AASS"></property>
+  		</bean>
+  		<bean id="pancard1" class="com.di.Pancard">
+  			<property name="name" value="IKU"></property>
+  			<property name="panNo" value="PABYFASDVC"></property>
+  		</bean>
+  		<bean id="pancard2" class="com.di.Pancard">
+  			<property name="name" value="RAM"></property>
+  			<property name="panNo" value="KJHGVBCIHV"></property>
+  		</bean>
+  		 -->
+  		
+  		
+  		
+  		<!-- this is the simple dependancy injection demo using @Autowired annotation and @Qualifier  
+  				with init method and destroy method using @PostConstruct and @PreDestroy-->
+  		<context:annotation-config></context:annotation-config>
+  		<bean id="user" class="com.di.User">
+  			<property name="userId" value="1"></property>
+  			<property name="userName" value="PINAL"></property>
+  		</bean>
+  		<bean id="pancard" class="com.di.Pancard">
+  			<property name="name" value="PINAL"></property>
+  			<property name="panNo" value="JGVAJGVA545AASS"></property>
+  		</bean>
+  		<bean id="pancard1" class="com.di.Pancard">
+  			<property name="name" value="IKU"></property>
+  			<property name="panNo" value="PABYFASDVC"></property>
+  		</bean>
+  		<bean id="pancard2" class="com.di.Pancard">
+  			<property name="name" value="RAM"></property>
+  			<property name="panNo" value="KJHGVBCIHV"></property>
+  		</bean>
+   </beans>

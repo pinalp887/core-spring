@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+  		<!-- this is the simple dependancy injection demo using constructor  -->
+  		<!-- <bean id="user" class="com.consInjection.User">
+  			<constructor-arg name="userId" value="1"></constructor-arg>
+  			<constructor-arg name="userName" value="PINAL"></constructor-arg>
+  			<constructor-arg  ref="pancard"></constructor-arg>
+  		</bean>
+  		<bean id="pancard" class="com.consInjection.Pancard">
+  			<property name="name" value="PINAL"></property>
+  			<property name="panNo" value="SDFGHJ4554CVB"></property>
+  		</bean> -->
+  			<!-- this is the simple dependancy injection demo using constructor and using @Autowired -->
+  			<context:annotation-config></context:annotation-config>
+  		<bean id="user" class="com.consInjection.User">
+  			<constructor-arg name="userId" value="1"></constructor-arg>
+  			<constructor-arg name="userName" value="PINAL"></constructor-arg>
+  		</bean>
+  		<bean id="pancard" class="com.consInjection.Pancard">
+  			<property name="name" value="PINAL"></property>
+  			<property name="panNo" value="SDFGHJ4554CVB"></property>
+  		</bean>
+  		<bean id="pancard1" class="com.consInjection.Pancard">
+  			<property name="name" value="DFGH"></property>
+  			<property name="panNo" value="WERTYUIKSSS"></property>
+  		</bean>
+  		
+   </beans>
